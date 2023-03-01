@@ -10,21 +10,21 @@ namespace SeleniumTestsWithoutPOM
         [Test]
         public void LoginFormWithValidData()
         {
-            string expectedResult = "Sveiki, erika.butkut!";
+           string expectedResult = "Sveiki, erika.butkut!";
 
             IWebDriver driver = new ChromeDriver();
-            driver.Url = "https://broliumedus.lt/";
-
-            driver.ExecuteJavaScript("window.scrollBy(0, 200)");
-
-            IWebElement buttonIconUser = driver.FindElement(By.XPath("//*[@id='masthead']/div[1]/div[4]/ul/li[3]/div/a/i"));
-            buttonIconUser.Click();
+            driver.Url = "https://broliumedus.lt/mano-paskyra/";
 
             string valueVartotojoVardas = "erika.butkut";
-            string valueSlaptazodis = "Testavimas3";
+            string valueSlaptazodis = "testavimas6";
 
             IWebElement inputVartotojoVardas = driver.FindElement(By.XPath("//*[@id='username']"));
             IWebElement inputSlaptazodis = driver.FindElement(By.XPath("//*[@id='password']"));
+
+            // Kai pakeičiau psl. į "https://broliumedus.lt/mano-paskyra/".
+            // Kodėl nebemato buttonPrisijungti?
+            //Error Message: no such element: Unable to locate element:
+            //{"method":"xpath","selector":"//*[@id='customer_login']/div[1]/div/form/a/p[3]/button"}
             IWebElement buttonPrisijungti = driver.FindElement(By.XPath("//*[@id='customer_login']/div[1]/div/form/a/p[3]/button"));
 
             inputVartotojoVardas.SendKeys(valueVartotojoVardas);
@@ -37,24 +37,19 @@ namespace SeleniumTestsWithoutPOM
 
             driver.Quit();
 
-            Assert.AreEqual(expectedResult, actualResult);
+           Assert.AreEqual(expectedResult, actualResult);
 
         }
 
         [Test]
         public void RegisterFormWithValidData()
         {
-            string expectedResult = "Sveiki, test3!";
+            string expectedResult = "Sveiki, test10! (Jūs ne test10? Atsijunkite)";
 
             IWebDriver driver = new ChromeDriver();
-            driver.Url = "https://broliumedus.lt/";
+            driver.Url = "https://broliumedus.lt/mano-paskyra/";
 
-            driver.ExecuteJavaScript("window.scrollBy(0, 200)");
-
-            IWebElement buttonIconUser = driver.FindElement(By.XPath("//*[@id='masthead']/div[1]/div[4]/ul/li[3]/div/a/i"));
-            buttonIconUser.Click();
-
-            string valueEmail = "test3@tester.com";
+            string valueEmail = "test10@tester.com";
 
             IWebElement inputEmail = driver.FindElement(By.XPath("//*[@id='reg_email']"));
             IWebElement buttonRegistruotis = driver.FindElement(By.XPath("//*[@id='customer_login']/div[2]/div/form/p[4]/button"));
@@ -85,7 +80,7 @@ namespace SeleniumTestsWithoutPOM
             buttonIconUser.Click();
 
             string valueVartotojoVardas = "erika.butkut";
-            string valueSlaptazodis = "Testavimas3";
+            string valueSlaptazodis = "testavimas6";
 
             IWebElement inputVartotojoVardas = driver.FindElement(By.XPath("//*[@id='username']"));
             IWebElement inputSlaptazodis = driver.FindElement(By.XPath("//*[@id='password']"));
@@ -104,8 +99,8 @@ namespace SeleniumTestsWithoutPOM
             IWebElement buttonVartotojoInformacija = driver.FindElement(By.XPath("//*[@id='content']/div/div/div/div/div/ul/li[5]"));
             buttonVartotojoInformacija.Click();
 
-            string valueEsamasSlaptazodis = "Testavimas3";
-            string valueNaujasSlaptazodis = "Testavimas4";
+            string valueEsamasSlaptazodis = "testavimas6";
+            string valueNaujasSlaptazodis = "testavimas7";
 
             IWebElement inputEsamasSlaptazodis = driver.FindElement(By.XPath("//*[@id='password_current']"));
             IWebElement inputNaujasSlaptazodis = driver.FindElement(By.XPath("//*[@id='password_1']"));
@@ -120,8 +115,10 @@ namespace SeleniumTestsWithoutPOM
 
             buttonIssaugotiPakeitimus.Click();
 
-            IWebElement PakeitimuZinute = driver.FindElement(By.XPath("//*[@id='wrapper']/div/div/i"));
-            string actualResult = PakeitimuZinute.Text;
+            //Error Message: Expected string length 37 but was 0. Strings differ ar index 0.
+            //Netinkamas ZinuteDuomenysPakeisti XPath?
+            IWebElement ZinuteDuomenysPakeisti = driver.FindElement(By.XPath("//*[@id='wrapper']/div/div/i"));
+            string actualResult = ZinuteDuomenysPakeisti.Text;
 
             driver.Quit();
 
@@ -131,7 +128,7 @@ namespace SeleniumTestsWithoutPOM
         [Test]
         public void AddProductToCart()
         {
-            //string expectedResult = " ????? ";
+            string expectedResult = "Vaisiu sulciu guminukai 'Broliai lokiai'";
 
             IWebDriver driver = new ChromeDriver();
             driver.Url = "https://broliumedus.lt/";
@@ -146,12 +143,15 @@ namespace SeleniumTestsWithoutPOM
             IWebElement buttonIdetiIKrepseli = driver.FindElement(By.XPath("//*[@id='main']/div/div/div/div[2]/div[1]/div/div[2]/div[2]/div[3]"));
             buttonIdetiIKrepseli.Click();
 
-            //IWebElement PakeitimuZinute = driver.FindElement(By.XPath("//*[@id='wrapper']/div/div/i"));
-            //string actualResult = PakeitimuZinute.Text;
+            // Error Message: no such element: Unable to locate element:
+            // {"method":"xpath","selector":"//*[@id="cart-popup"]/div/div[2]/ul/li"}
+            //Netinkamas IdetoIKrepseliPoduktoPavadinimas XPath?
+            IWebElement IdetoIKrepseliPoduktoPavadinimas = driver.FindElement(By.XPath("//*[@id=\"cart-popup\"]/div/div[2]/ul/li"));
+            string actualResult = IdetoIKrepseliPoduktoPavadinimas.Text;
 
             driver.Quit();
 
-           // Assert.AreEqual(expectedResult, actualResult);
+            Assert.AreEqual(expectedResult, actualResult);
         }
 
         [Test]
@@ -169,8 +169,14 @@ namespace SeleniumTestsWithoutPOM
 
             driver.ExecuteJavaScript("window.scrollBy(0, 1200)");
 
+
+            // Error Message:  no such element: Unable to locate element:
+            // {"method":"xpath","selector":"//*[@id='col-1729804244']/div/p/a"}
+            //Netinkamas buttonUzsisakytiEdukacija XPath?
             IWebElement buttonUzsisakytiEdukacija = driver.FindElement(By.XPath("//*[@id='col-1729804244']/div/p/a"));
             buttonUzsisakytiEdukacija.Click();
+
+
 
             //string valueVardas = "Tester";
             //string valueEmail = "test@tester.com";

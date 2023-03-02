@@ -2,6 +2,8 @@
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.Extensions;
+using OpenQA.Selenium.Support.UI;
+using System;
 
 namespace SeleniumTestsWithoutPOM
 {
@@ -153,14 +155,21 @@ namespace SeleniumTestsWithoutPOM
             IWebElement buttonEdukacijos = driver.FindElement(By.XPath("//*[@id='menu-item-4009']/a"));
             buttonEdukacijos.Click();
 
-            driver.ExecuteJavaScript("window.scrollBy(0, 1200)");
+            driver.ExecuteJavaScript("window.scrollBy(0, 1300)");
+
 
 
             // Error Message:  no such element: Unable to locate element:
-            // {"method":"xpath","selector":"//*[@id='col-1729804244']/div/p/a"}
-            //Netinkamas buttonUzsisakytiEdukacija XPath?
-            IWebElement buttonUzsisakytiEdukacija = driver.FindElement(By.XPath("//*[@id='col-1729804244']/div/p/a"));
+            // {"method":"xpath","selector":"//*[@id=\"col-1789862094\"]/div/p/a"}
+            //Kaip apsirašyti buttonUzsisakytiEdukacija XPath, jeigu @id='col-1789862094',
+            //kiekvieną kartą perkrovus svetainę, pasikeičia?????????
+
+            IWebElement buttonUzsisakytiEdukacija = driver.FindElement(By.XPath("//*[@id=\"col-1789862094\"]/div/p/a"));
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
             buttonUzsisakytiEdukacija.Click();
+
+
+
 
 
 
@@ -180,7 +189,7 @@ namespace SeleniumTestsWithoutPOM
             //IWebElement ZinuteIssiustaSekmingai = driver.FindElement(By.XPath("//*[@id="wpcf7-f7-p87-o1"]/form/div[3]"));
             //string actualResult = ZinuteIssiustaSekmnigai.Text;
 
-            //buttonSiusti.Click();
+            buttonSiusti.Click();
 
             driver.Quit();
 

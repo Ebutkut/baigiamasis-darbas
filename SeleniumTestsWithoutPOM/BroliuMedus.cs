@@ -4,6 +4,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Support.Extensions;
 using OpenQA.Selenium.Support.UI;
 using System;
+using SeleniumExtras.WaitHelpers;
 
 namespace SeleniumTestsWithoutPOM
 {
@@ -113,16 +114,7 @@ namespace SeleniumTestsWithoutPOM
         [Test]
         public void AddProductToCart()
         {
-            // Ar gali būti taip apibrėžtas expectedResult? Taip testas pass'ina.
-            // Test case: patikrinu ar paspaudus buttonIdetiIKrepseli,
-            // atsiranda Krepselio "langas" ir matomas kažkoks tekstas.
-            // Nežinau, kaip apibrėžti expextedResult, jei tikrinu,
-            // ar paspaudus mygtuką įdeti į krepšelį produktą atsidaro krepselio langas.
-
-            //string expectedResult = "";
-            
-            
-            string expectedResult = "Krepšelis";
+            string expectedResult = "Vaisių sulčių guminukai „Broliai lokiai“";
 
             IWebDriver driver = new ChromeDriver();
             driver.Url = "https://broliumedus.lt/";
@@ -133,13 +125,13 @@ namespace SeleniumTestsWithoutPOM
             buttonMedus.Click();
 
             driver.ExecuteJavaScript("window.scrollBy(0, 200)");
-            new WebDriverWait(driver, TimeSpan.FromSeconds(20));
+            new WebDriverWait(driver, TimeSpan.FromSeconds(30));
             IWebElement buttonIdetiIKrepseli = driver.FindElement(By.XPath("//*[@id='main']/div/div/div/div[2]/div[1]/div/div[2]/div[2]/div[3]"));
             buttonIdetiIKrepseli.Click();
 
-            new WebDriverWait(driver, TimeSpan.FromSeconds(20));
-            IWebElement KrepselioLangasIdejusPodukta = driver.FindElement(By.XPath("//*[@id=\"cart-popup\"]"));
-           
+            new WebDriverWait(driver, TimeSpan.FromSeconds(30));
+            IWebElement KrepselioLangasIdejusPodukta = driver.FindElement(By.XPath("//a[text()='Vaisių sulčių guminukai „Broliai lokiai“']"));
+
             string actualResult = KrepselioLangasIdejusPodukta.Text;
 
             driver.Quit();
@@ -150,53 +142,61 @@ namespace SeleniumTestsWithoutPOM
         [Test]
         public void EducationFormWithValidData()
         {
-            //string expectedResult = "Ačiū už Jūsų žinutę. Žinutė sėkmingai išsiųsta.";
+            string expectedResult = "Ačiū už Jūsų žinutę. Žinutė sėkmingai išsiųsta.";
 
             IWebDriver driver = new ChromeDriver();
             driver.Url = "https://broliumedus.lt/";
 
-            driver.ExecuteJavaScript("window.scrollBy(0, 400)");
+            driver.ExecuteJavaScript("window.scrollBy(0, 300)");
 
             new WebDriverWait(driver, TimeSpan.FromSeconds(10));
-            IWebElement buttonEdukacijos = driver.FindElement(By.XPath("//*[@id='menu-item-4009']/a"));
+            IWebElement buttonEdukacijos = driver.FindElement(By.XPath("//*[@id='menu-item-4009']"));
             buttonEdukacijos.Click();
 
             driver.ExecuteJavaScript("window.scrollBy(0, 1300)");
-
-
-
-            // Error Message:  no such element: Unable to locate element:
-            // {"method":"xpath","selector":"//*[@id=\"col-1789862094\"]/div/p/a"}
-            //Kaip apsirašyti buttonUzsisakytiEdukacija XPath, jeigu @id='col-1789862094',
-            //kiekvieną kartą perkrovus svetainę, pasikeičia?????????
-            
+ 
             new WebDriverWait(driver, TimeSpan.FromSeconds(10));
-            IWebElement buttonUzsisakytiEdukacija = driver.FindElement(By.XPath("//*[@id=\"col-1789862094\"]/div/p/a"));
+            IWebElement buttonUzsisakytiEdukacija = driver.FindElement(By.XPath("//a[text()='UŽSISAKYTI EDUKACIJĄ']"));
            
             buttonUzsisakytiEdukacija.Click();
 
 
-            //string valueVardas = "Tester";
-            //string valueEmail = "test@tester.com";
-            //string valueZinute = "Noriu";
+            string valueVardas = "Tester";
+            string valueEmail = "test@tester.com";
+            string valueZinute = "Noriu";
 
-            //IWebElement inputVardas = driver.FindElement(By.XPath("//*[@id=\"wpcf7-f7-p87-o1\"]/form/div[2]/span/input"));
-            //IWebElement inputEmail = driver.FindElement(By.XPath("//*[@id=\"wpcf7-f7-p87-o1\"]/form/div[2]/p[2]/span/input"));
-            //IWebElement inputZinute = driver.FindElement(By.XPath("//*[@id=\"wpcf7-f7-p87-o1\"]/form/div[2]/p[3]/span/textarea"));
-            //IWebElement buttonSiusti = driver.FindElement(By.XPath("//*[@id=\"wpcf7-f7-p87-o1\"]/form/div[2]/p[4]/input"));
+            IWebElement inputVardas = driver.FindElement(By.XPath("//*[@id=\"wpcf7-f7-p87-o1\"]/form/div[2]/span/input"));
+            IWebElement inputEmail = driver.FindElement(By.XPath("//*[@id=\"wpcf7-f7-p87-o1\"]/form/div[2]/p[2]/span/input"));
+            IWebElement inputZinute = driver.FindElement(By.XPath("//*[@id=\"wpcf7-f7-p87-o1\"]/form/div[2]/p[3]/span/textarea"));
+           
+            new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+            IWebElement buttonSiusti = driver.FindElement(By.XPath("//*[@id=\"wpcf7-f7-p87-o1\"]/form/div[2]/p[4]/input"));
 
-            //inputVardas.SendKeys(valueVardas);
-            //inputEmail.SendKeys(valueEmail);
-            //inputZinute.SendKeys(valueZinute);
+            inputVardas.SendKeys(valueVardas);
+            inputEmail.SendKeys(valueEmail);
+            inputZinute.SendKeys(valueZinute);
 
-            //IWebElement ZinuteIssiustaSekmingai = driver.FindElement(By.XPath("//*[@id="wpcf7-f7-p87-o1"]/form/div[3]"));
-            //string actualResult = ZinuteIssiustaSekmnigai.Text;
+            driver.ExecuteJavaScript("window.scrollBy(0, 300)");
 
-            //buttonSiusti.Click();
+            //IWebElement ZinuteIssiustaSekmingai = driver.FindElement(By.XPath("//*[contains(text().,'Ačiū už Jūsų žinutę. Žinutė sėkmingai išsiųsta.)']"));
+
+            //IWebElement ZinuteIssiustaSekmingai = driver.FindElement(By.XPath("//*[@class='wpcf7-response-output']"));
+            //string actualResult = ZinuteIssiustaSekmingai.Text;
+
+            new WebDriverWait(driver, TimeSpan.FromSeconds(30));
+            buttonSiusti.Click();
+
+            new WebDriverWait(driver, TimeSpan.FromSeconds(30));
+            IWebElement ZinuteIssiustaSekmingai = driver.FindElement(By.XPath("//*[@class='wpcf7-response-output']//*[text()='Ačiū už Jūsų žinutę. Žinutė sėkmingai išsiųsta.']"));
+            string actualResult = ZinuteIssiustaSekmingai.Text;
+
+            //WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(50));
+            //IWebElement element = wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//form//div[@class='wpcf7-response-output']//*[text()='Ačiū už Jūsų žinutę. Žinutė sėkmingai išsiųsta.']")));
+            //string actualResult = element.Text;
 
             driver.Quit();
 
-            // Assert.AreEqual(expectedResult, actualResult);
+            Assert.AreEqual(expectedResult, actualResult);
         }
     }
 }

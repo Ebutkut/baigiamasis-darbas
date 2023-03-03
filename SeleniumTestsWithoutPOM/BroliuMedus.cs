@@ -19,7 +19,7 @@ namespace SeleniumTestsWithoutPOM
             driver.Url = "https://broliumedus.lt/mano-paskyra/";
 
             string valueVartotojoVardas = "erika.butkut";
-            string valueSlaptazodis = "testavimas11";
+            string valueSlaptazodis = "testavimas12";
 
             IWebElement inputVartotojoVardas = driver.FindElement(By.XPath("//*[@id='username']"));
             IWebElement inputSlaptazodis = driver.FindElement(By.XPath("//*[@id='password']"));
@@ -35,19 +35,19 @@ namespace SeleniumTestsWithoutPOM
 
             driver.Quit();
 
-           Assert.AreEqual(expectedResult, actualResult);
+            Assert.AreEqual(expectedResult, actualResult);
 
         }
 
         [Test]
         public void RegisterFormWithValidData()
         {
-            string expectedResult = "Sveiki, test11! (Jūs ne test11? Atsijunkite)";
+            string expectedResult = "Sveiki, test16! (Jūs ne test16? Atsijunkite)";
 
             IWebDriver driver = new ChromeDriver();
             driver.Url = "https://broliumedus.lt/mano-paskyra/";
 
-            string valueEmail = "test11@tester.com";
+            string valueEmail = "test16@tester.com";
 
             IWebElement inputEmail = driver.FindElement(By.XPath("//*[@id='reg_email']"));
             IWebElement buttonRegistruotis = driver.FindElement(By.XPath("//*[@id='customer_login']/div[2]/div/form/p[4]/button"));
@@ -73,7 +73,7 @@ namespace SeleniumTestsWithoutPOM
             driver.Url = "https://broliumedus.lt/mano-paskyra/";
 
             string valueVartotojoVardas = "erika.butkut";
-            string valueSlaptazodis = "testavimas11";
+            string valueSlaptazodis = "testavimas12";
 
             IWebElement inputVartotojoVardas = driver.FindElement(By.XPath("//*[@id='username']"));
             IWebElement inputSlaptazodis = driver.FindElement(By.XPath("//*[@id='password']"));
@@ -87,8 +87,8 @@ namespace SeleniumTestsWithoutPOM
             IWebElement buttonVartotojoInformacija = driver.FindElement(By.XPath("//*[@id='content']/div/div/div/div/div/ul/li[5]"));
             buttonVartotojoInformacija.Click();
 
-            string valueEsamasSlaptazodis = "testavimas11";
-            string valueNaujasSlaptazodis = "testavimas12";
+            string valueEsamasSlaptazodis = "testavimas12";
+            string valueNaujasSlaptazodis = "testavimas13";
 
             IWebElement inputEsamasSlaptazodis = driver.FindElement(By.XPath("//*[@id='password_current']"));
             IWebElement inputNaujasSlaptazodis = driver.FindElement(By.XPath("//*[@id='password_1']"));
@@ -160,17 +160,16 @@ namespace SeleniumTestsWithoutPOM
            
             buttonUzsisakytiEdukacija.Click();
 
-
             string valueVardas = "Tester";
             string valueEmail = "test@tester.com";
             string valueZinute = "Noriu";
 
-            IWebElement inputVardas = driver.FindElement(By.XPath("//*[@id=\"wpcf7-f7-p87-o1\"]/form/div[2]/span/input"));
-            IWebElement inputEmail = driver.FindElement(By.XPath("//*[@id=\"wpcf7-f7-p87-o1\"]/form/div[2]/p[2]/span/input"));
-            IWebElement inputZinute = driver.FindElement(By.XPath("//*[@id=\"wpcf7-f7-p87-o1\"]/form/div[2]/p[3]/span/textarea"));
+            IWebElement inputVardas = driver.FindElement(By.XPath("//*[@id='wpcf7-f7-p87-o1']/form/div[2]/span/input"));
+            IWebElement inputEmail = driver.FindElement(By.XPath("//*[@id='wpcf7-f7-p87-o1']/form/div[2]/p[2]/span/input"));
+            IWebElement inputZinute = driver.FindElement(By.XPath("//*[@id='wpcf7-f7-p87-o1']/form/div[2]/p[3]/span/textarea"));
            
             new WebDriverWait(driver, TimeSpan.FromSeconds(10));
-            IWebElement buttonSiusti = driver.FindElement(By.XPath("//*[@id=\"wpcf7-f7-p87-o1\"]/form/div[2]/p[4]/input"));
+            IWebElement buttonSiusti = driver.FindElement(By.XPath("//*[@id='wpcf7-f7-p87-o1']/form/div[2]/p[4]/input"));
 
             inputVardas.SendKeys(valueVardas);
             inputEmail.SendKeys(valueEmail);
@@ -178,21 +177,12 @@ namespace SeleniumTestsWithoutPOM
 
             driver.ExecuteJavaScript("window.scrollBy(0, 300)");
 
-            //IWebElement ZinuteIssiustaSekmingai = driver.FindElement(By.XPath("//*[contains(text().,'Ačiū už Jūsų žinutę. Žinutė sėkmingai išsiųsta.)']"));
-
-            //IWebElement ZinuteIssiustaSekmingai = driver.FindElement(By.XPath("//*[@class='wpcf7-response-output']"));
-            //string actualResult = ZinuteIssiustaSekmingai.Text;
-
             new WebDriverWait(driver, TimeSpan.FromSeconds(30));
             buttonSiusti.Click();
 
-            new WebDriverWait(driver, TimeSpan.FromSeconds(30));
-            IWebElement ZinuteIssiustaSekmingai = driver.FindElement(By.XPath("//*[@class='wpcf7-response-output']//*[text()='Ačiū už Jūsų žinutę. Žinutė sėkmingai išsiųsta.']"));
-            string actualResult = ZinuteIssiustaSekmingai.Text;
-
-            //WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(50));
-            //IWebElement element = wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//form//div[@class='wpcf7-response-output']//*[text()='Ačiū už Jūsų žinutę. Žinutė sėkmingai išsiųsta.']")));
-            //string actualResult = element.Text;
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(50));
+            IWebElement element = wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//*[@class='wpcf7-response-output'][text()='Ačiū už Jūsų žinutę. Žinutė sėkmingai išsiųsta.']")));
+            string actualResult = element.Text;
 
             driver.Quit();
 

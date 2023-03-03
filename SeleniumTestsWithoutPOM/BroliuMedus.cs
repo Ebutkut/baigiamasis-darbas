@@ -118,8 +118,12 @@ namespace SeleniumTestsWithoutPOM
             // atsiranda Krepselio "langas" ir matomas kažkoks tekstas.
             // Nežinau, kaip apibrėžti expextedResult, jei tikrinu,
             // ar paspaudus mygtuką įdeti į krepšelį produktą atsidaro krepselio langas.
-            string expectedResult = "";
-           
+
+            //string expectedResult = "";
+            
+            
+            string expectedResult = "Krepšelis";
+
             IWebDriver driver = new ChromeDriver();
             driver.Url = "https://broliumedus.lt/";
 
@@ -129,12 +133,13 @@ namespace SeleniumTestsWithoutPOM
             buttonMedus.Click();
 
             driver.ExecuteJavaScript("window.scrollBy(0, 200)");
-
+            new WebDriverWait(driver, TimeSpan.FromSeconds(20));
             IWebElement buttonIdetiIKrepseli = driver.FindElement(By.XPath("//*[@id='main']/div/div/div/div[2]/div[1]/div/div[2]/div[2]/div[3]"));
             buttonIdetiIKrepseli.Click();
 
-            IWebElement KrepselioLangasIdejusPodukta = driver.FindElement(By.XPath("//*[@id='cart-popup']"));
-                                                                                    
+            new WebDriverWait(driver, TimeSpan.FromSeconds(20));
+            IWebElement KrepselioLangasIdejusPodukta = driver.FindElement(By.XPath("//*[@id=\"cart-popup\"]"));
+           
             string actualResult = KrepselioLangasIdejusPodukta.Text;
 
             driver.Quit();
@@ -152,6 +157,7 @@ namespace SeleniumTestsWithoutPOM
 
             driver.ExecuteJavaScript("window.scrollBy(0, 400)");
 
+            new WebDriverWait(driver, TimeSpan.FromSeconds(10));
             IWebElement buttonEdukacijos = driver.FindElement(By.XPath("//*[@id='menu-item-4009']/a"));
             buttonEdukacijos.Click();
 
@@ -163,14 +169,11 @@ namespace SeleniumTestsWithoutPOM
             // {"method":"xpath","selector":"//*[@id=\"col-1789862094\"]/div/p/a"}
             //Kaip apsirašyti buttonUzsisakytiEdukacija XPath, jeigu @id='col-1789862094',
             //kiekvieną kartą perkrovus svetainę, pasikeičia?????????
-
+            
+            new WebDriverWait(driver, TimeSpan.FromSeconds(10));
             IWebElement buttonUzsisakytiEdukacija = driver.FindElement(By.XPath("//*[@id=\"col-1789862094\"]/div/p/a"));
-            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+           
             buttonUzsisakytiEdukacija.Click();
-
-
-
-
 
 
             //string valueVardas = "Tester";
@@ -189,7 +192,7 @@ namespace SeleniumTestsWithoutPOM
             //IWebElement ZinuteIssiustaSekmingai = driver.FindElement(By.XPath("//*[@id="wpcf7-f7-p87-o1"]/form/div[3]"));
             //string actualResult = ZinuteIssiustaSekmnigai.Text;
 
-            buttonSiusti.Click();
+            //buttonSiusti.Click();
 
             driver.Quit();
 

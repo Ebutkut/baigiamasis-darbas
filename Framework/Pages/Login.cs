@@ -25,11 +25,6 @@ namespace Framework.Pages
             Common.ClickElement(Locators.Login.buttonPrisijungti);
         }
 
-        public static void SpaustiPrisijunimoMygtuka()
-        {
-            Common.ClickElement(Locators.Login.buttonPrisijungti);
-        }
-
         public static string PrisijungimoPatvirtinimas()
         {
             return Common.GetElementText(Locators.Login.zinutePrisijungus);

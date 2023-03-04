@@ -19,7 +19,7 @@ namespace Tests
         {
             string expectedText = "Sveiki, erika.butkut! (Jūs ne erika.butkut? Atsijunkite)";
             string valueVartotojoVardas = "erika.butkut";
-            string valueSlaptazodis = "testavimas13";
+            string valueSlaptazodis = "testavimas14";
               
             Login.IsjungtiSlapukus();
             Login.IvestiVartotojoVarda(valueVartotojoVardas);

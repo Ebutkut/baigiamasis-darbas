@@ -5,6 +5,10 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeleniumTestsWithoutPOM", "SeleniumTestsWithoutPOM\SeleniumTestsWithoutPOM.csproj", "{47E1CA74-41A6-4CA7-B86B-F76D33457AA1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework", "Framework\Framework.csproj", "{ED676DE4-2C1D-43C7-B599-6EE4FEDC02FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{7120DAB4-5A5A-43FD-966F-95195E1B65EB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{47E1CA74-41A6-4CA7-B86B-F76D33457AA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{47E1CA74-41A6-4CA7-B86B-F76D33457AA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{47E1CA74-41A6-4CA7-B86B-F76D33457AA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED676DE4-2C1D-43C7-B599-6EE4FEDC02FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED676DE4-2C1D-43C7-B599-6EE4FEDC02FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED676DE4-2C1D-43C7-B599-6EE4FEDC02FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED676DE4-2C1D-43C7-B599-6EE4FEDC02FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7120DAB4-5A5A-43FD-966F-95195E1B65EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7120DAB4-5A5A-43FD-966F-95195E1B65EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7120DAB4-5A5A-43FD-966F-95195E1B65EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7120DAB4-5A5A-43FD-966F-95195E1B65EB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

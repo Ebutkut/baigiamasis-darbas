@@ -18,8 +18,12 @@ namespace SeleniumTestsWithoutPOM
             IWebDriver driver = new ChromeDriver();
             driver.Url = "https://broliumedus.lt/mano-paskyra/";
 
+            new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+            IWebElement buttonSlapukuIsjungimas = driver.FindElement(By.XPath("//button[.='OK']"));
+            buttonSlapukuIsjungimas.Click();
+
             string valueVartotojoVardas = "erika.butkut";
-            string valueSlaptazodis = "testavimas12";
+            string valueSlaptazodis = "testavimas13";
 
             IWebElement inputVartotojoVardas = driver.FindElement(By.XPath("//*[@id='username']"));
             IWebElement inputSlaptazodis = driver.FindElement(By.XPath("//*[@id='password']"));
@@ -42,12 +46,16 @@ namespace SeleniumTestsWithoutPOM
         [Test]
         public void RegisterFormWithValidData()
         {
-            string expectedResult = "Sveiki, test16! (Jūs ne test16? Atsijunkite)";
+            string expectedResult = "Sveiki, test25! (Jūs ne test25? Atsijunkite)";
 
             IWebDriver driver = new ChromeDriver();
             driver.Url = "https://broliumedus.lt/mano-paskyra/";
 
-            string valueEmail = "test16@tester.com";
+            new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+            IWebElement buttonSlapukuIsjungimas = driver.FindElement(By.XPath("//button[.='OK']"));
+            buttonSlapukuIsjungimas.Click();
+
+            string valueEmail = "test25@tester.com";
 
             IWebElement inputEmail = driver.FindElement(By.XPath("//*[@id='reg_email']"));
             IWebElement buttonRegistruotis = driver.FindElement(By.XPath("//*[@id='customer_login']/div[2]/div/form/p[4]/button"));
@@ -72,8 +80,12 @@ namespace SeleniumTestsWithoutPOM
             IWebDriver driver = new ChromeDriver();
             driver.Url = "https://broliumedus.lt/mano-paskyra/";
 
+            new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+            IWebElement buttonSlapukuIsjungimas = driver.FindElement(By.XPath("//button[.='OK']"));
+            buttonSlapukuIsjungimas.Click();
+
             string valueVartotojoVardas = "erika.butkut";
-            string valueSlaptazodis = "testavimas12";
+            string valueSlaptazodis = "testavimas13";
 
             IWebElement inputVartotojoVardas = driver.FindElement(By.XPath("//*[@id='username']"));
             IWebElement inputSlaptazodis = driver.FindElement(By.XPath("//*[@id='password']"));
@@ -87,8 +99,8 @@ namespace SeleniumTestsWithoutPOM
             IWebElement buttonVartotojoInformacija = driver.FindElement(By.XPath("//*[@id='content']/div/div/div/div/div/ul/li[5]"));
             buttonVartotojoInformacija.Click();
 
-            string valueEsamasSlaptazodis = "testavimas12";
-            string valueNaujasSlaptazodis = "testavimas13";
+            string valueEsamasSlaptazodis = "testavimas13";
+            string valueNaujasSlaptazodis = "testavimas14";
 
             IWebElement inputEsamasSlaptazodis = driver.FindElement(By.XPath("//*[@id='password_current']"));
             IWebElement inputNaujasSlaptazodis = driver.FindElement(By.XPath("//*[@id='password_1']"));
@@ -119,6 +131,10 @@ namespace SeleniumTestsWithoutPOM
             IWebDriver driver = new ChromeDriver();
             driver.Url = "https://broliumedus.lt/";
 
+            new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+            IWebElement buttonSlapukuIsjungimas = driver.FindElement(By.XPath("//button[.='OK']"));
+            buttonSlapukuIsjungimas.Click();
+
             driver.ExecuteJavaScript("window.scrollBy(0, 400)");
 
             IWebElement buttonMedus = driver.FindElement(By.XPath("//*[@id='menu-item-638']"));
@@ -126,7 +142,7 @@ namespace SeleniumTestsWithoutPOM
 
             driver.ExecuteJavaScript("window.scrollBy(0, 200)");
             new WebDriverWait(driver, TimeSpan.FromSeconds(30));
-            IWebElement buttonIdetiIKrepseli = driver.FindElement(By.XPath("//*[@id='main']/div/div/div/div[2]/div[1]/div/div[2]/div[2]/div[3]"));
+            IWebElement buttonIdetiIKrepseli = driver.FindElement(By.XPath("//a[text()='Į krepšelį']"));
             buttonIdetiIKrepseli.Click();
 
             new WebDriverWait(driver, TimeSpan.FromSeconds(30));
@@ -146,6 +162,10 @@ namespace SeleniumTestsWithoutPOM
 
             IWebDriver driver = new ChromeDriver();
             driver.Url = "https://broliumedus.lt/";
+
+            new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+            IWebElement buttonSlapukuIsjungimas = driver.FindElement(By.XPath("//button[.='OK']"));
+            buttonSlapukuIsjungimas.Click();
 
             driver.ExecuteJavaScript("window.scrollBy(0, 300)");
 

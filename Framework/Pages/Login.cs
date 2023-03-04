@@ -35,7 +35,5 @@ namespace Framework.Pages
             return Common.GetElementText(Locators.Login.zinutePrisijungus);
         }
 
-
-
     }
 }

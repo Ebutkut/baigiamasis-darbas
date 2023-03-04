@@ -51,6 +51,7 @@
     <Compile Include="BaseTest.cs" />
     <Compile Include="LoginTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegisterTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

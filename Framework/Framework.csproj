@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="Driver.cs" />
     <Compile Include="Pages\Common.cs" />
+    <Compile Include="Pages\EducationForm.cs" />
     <Compile Include="Pages\Locators.cs" />
     <Compile Include="Pages\Login.cs" />
     <Compile Include="Pages\Register.cs" />

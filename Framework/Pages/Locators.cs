@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using System;
 
 namespace Framework.Pages
 {
@@ -41,7 +42,19 @@ namespace Framework.Pages
             internal static string buttonOKSlapukuIsjungimas = "//button[.='OK']";
             internal static string buttonMedus = "//*[@id='menu-item-638']";
             internal static string buttonIdetiIKrepseli = "//a[text()='Į krepšelį']";
-            internal static string PirkiniuKrepselisSuIdetuPoduktu = "//a[text()='Vaisių sulčių guminukai „Broliai lokiai“']";
+            internal static string IPirkiniuKrepseliIdetasProduktas = "//a[text()='Vaisių sulčių guminukai „Broliai lokiai“']";
+        }
+
+        internal static class EducationForm
+        {
+            internal static string buttonOKSlapukuIsjungimas = "//button[.='OK']";
+            internal static string buttonEdukacijos = "//*[@id='menu-item-4009']";
+            internal static string buttonUzsisakytiEdukacija = "//a[text()='UŽSISAKYTI EDUKACIJĄ']";
+            internal static string inputVardas = "//*[@id='wpcf7-f7-p87-o1']/form/div[2]/span/input";
+            internal static string inputEmail = "//*[@id='wpcf7-f7-p87-o1']/form/div[2]/p[2]/span/input";
+            internal static string inputZinute = "//*[@id='wpcf7-f7-p87-o1']/form/div[2]/p[3]/span/textarea";
+            internal static string buttonSiusti = "//*[@id='wpcf7-f7-p87-o1']/form/div[2]/p[4]/input";
+            internal static string zinuteUzsisakiusEdukacija = "//*[@class='wpcf7-response-output'][text()='Ačiū už Jūsų žinutę. Žinutė sėkmingai išsiųsta.']";
         }
 
     }

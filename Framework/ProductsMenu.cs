@@ -12,6 +12,12 @@ namespace Framework
             Common.ClickElement(Locators.ProductsMenu.buttonIdetiIKrepseli);
         }
 
+        public static string IPirkiniuKrepseliIdetasProduktas()
+        {
+            Common.WaitForElementToBeVisible(Locators.ProductsMenu.IPirkiniuKrepseliIdetasProduktas);
+            return Common.GetElementText(Locators.ProductsMenu.IPirkiniuKrepseliIdetasProduktas);
+        }
+
         public static void IsjungtiSlapukus()
         {
             Common.WaitForElementToBeVisible(Locators.ProductsMenu.buttonOKSlapukuIsjungimas);
@@ -24,10 +30,5 @@ namespace Framework
             Common.ClickElement(Locators.ProductsMenu.buttonMedus);
         }
 
-        public static string PirkiniuKrepselisSuIdetiProduktu()
-        {
-            Common.WaitForElementToBeVisible(Locators.ProductsMenu.PirkiniuKrepselisSuIdetuPoduktu);
-            return Common.GetElementText(Locators.ProductsMenu.PirkiniuKrepselisSuIdetuPoduktu);
-        }
     }
 }

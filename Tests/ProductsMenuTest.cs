@@ -20,9 +20,9 @@ namespace Tests
             ProductsMenu.IsjungtiSlapukus();
             ProductsMenu.Medus();
             ProductsMenu.IdetiIKrepseli();
-            ProductsMenu.PirkiniuKrepselisSuIdetiProduktu();
+            ProductsMenu.IPirkiniuKrepseliIdetasProduktas();
 
-            Assert.AreEqual(expectedResult, ProductsMenu.PirkiniuKrepselisSuIdetiProduktu());
+            Assert.AreEqual(expectedResult, ProductsMenu.IPirkiniuKrepseliIdetasProduktas());
         }
     }
 }

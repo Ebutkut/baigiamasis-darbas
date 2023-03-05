@@ -7,7 +7,7 @@ namespace Framework.Pages
 {
     public class EducationForm
     {
-        public static void IsjungtiSlapukus()
+        public static void IsjungtiSlapukusSpaustiOK()
         {
             Common.WaitForElementToBeVisible(Locators.EducationForm.buttonOKSlapukuIsjungimas);
             Common.ClickElement(Locators.EducationForm.buttonOKSlapukuIsjungimas);
@@ -23,21 +23,21 @@ namespace Framework.Pages
             Common.SendKeys(Locators.EducationForm.inputVardas, valueVardas);
         }
 
-        public static void MygtukasEdukacijos()
+        public static void SpaustiMygtukaEdukacijos()
         {
             Common.ScrollByPixels(0, 200);
             Common.WaitForElementToBeVisible(Locators.EducationForm.buttonEdukacijos);
             Common.ClickElement(Locators.EducationForm.buttonEdukacijos);
         }
 
-        public static void MygtukasSiusti()
+        public static void SpaustiMygtukaSiusti()
         {
             Common.ScrollByPixels(0, 300);
             Common.WaitForElementToBeVisible(Locators.EducationForm.buttonSiusti);
             Common.ClickElement(Locators.EducationForm.buttonSiusti);
         }
 
-        public static void MygtukasUzsisakytiEdukacija()
+        public static void SpaustiMygtukaUzsisakytiEdukacija()
         {
             Common.ScrollByPixels(0, 1300);
             Common.WaitForElementToBeVisible(Locators.EducationForm.buttonUzsisakytiEdukacija);

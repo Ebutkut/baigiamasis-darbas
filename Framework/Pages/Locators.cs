@@ -42,6 +42,7 @@ namespace Framework.Pages
             internal static string buttonOKSlapukuIsjungimas = "//button[.='OK']";
             internal static string buttonMedus = "//*[@id='menu-item-638']";
             internal static string buttonIdetiIKrepseli = "//a[text()='Į krepšelį']";
+            internal static string buttonPerziuretiKrepseli = "//a[text()='Peržiūrėti krepšelį']";
             internal static string IPirkiniuKrepseliIdetasProduktas = "//a[text()='Vaisių sulčių guminukai „Broliai lokiai“']";
         }
 

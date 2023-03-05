@@ -4,7 +4,7 @@ namespace Framework.Pages
 {
     public class Login
     {
-        public static void IsjungtiSlapukus()
+        public static void IsjungtiSlapukusSpaustiOK()
         {
             Common.WaitForElementToBeVisible(Locators.Login.buttonOKSlapukuIsjungimas);
             Common.ClickElement(Locators.Login.buttonOKSlapukuIsjungimas);

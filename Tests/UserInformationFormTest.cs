@@ -19,19 +19,19 @@ namespace Tests
             string expectedText = "Paskyros duomenys sėkmingai pakeisti.";
 
             string valueVartotojoVardas = "erika.butkut";
-            string valueSlaptazodis = "testavimas14";
-            string valueEsamasSlaptazodis = "testavimas14";
-            string valueNaujasSlaptazodis = "testavimas15";
+            string valueSlaptazodis = "testavimas16";
+            string valueEsamasSlaptazodis = "testavimas16";
+            string valueNaujasSlaptazodis = "testavimas17";
 
-            UserInformationForm.IsjungtiSlapukus();
+            UserInformationForm.IsjungtiSlapukusSpaustiOK();
             UserInformationForm.IvestiVartotojoVarda(valueVartotojoVardas);
             UserInformationForm.IvestiSlaptazodi(valueSlaptazodis);
-            UserInformationForm.MygtukasPrisijungti();
-            UserInformationForm.MygtukasVartotojoInformacija();
+            UserInformationForm.SpaustiMygtukaPrisijungti();
+            UserInformationForm.SpaustiMygtukaVartotojoInformacija();
             UserInformationForm.IvestiEsamaSlaptazodi(valueEsamasSlaptazodis);
             UserInformationForm.IvestiNaujaSlaptazodi(valueNaujasSlaptazodis);
             UserInformationForm.PatvirtintiNaujaSlaptazodi(valueNaujasSlaptazodis);
-            UserInformationForm.MygtukasIssaugotiPakeitimus();
+            UserInformationForm.SpaustiMygtukaIssaugotiPakeitimus();
 
             Assert.AreEqual(expectedText, UserInformationForm.DuomenuPakeitimoPatvirtinimas());
         }

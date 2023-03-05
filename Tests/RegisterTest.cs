@@ -15,11 +15,11 @@ namespace Tests
         [Test]
         public void RegisterFormWithValidData()
         {
-            string expectedText = "Sveiki, test30! (Jūs ne test30? Atsijunkite)";
+            string expectedText = "Sveiki, test35! (Jūs ne test35? Atsijunkite)";
 
-            string valueEmail = "test30@tester.com";
+            string valueEmail = "test35@tester.com";
 
-            Register.IsjungtiSlapukus();
+            Register.IsjungtiSlapukusSpaustiOK();
             Register.IvestiElPasta(valueEmail);
             Register.SpaustiMygtukaRegistruotis();
 

@@ -5,7 +5,7 @@ namespace Framework
 {
     public class ProductsMenu
     {
-        public static void IdetiIKrepseli()
+        public static void SpaustiMygtukaIdetiIKrepseli()
         {
             Common.ScrollByPixels(0, 200);
             Common.WaitForElementToBeVisible(Locators.ProductsMenu.buttonIdetiIKrepseli);
@@ -24,11 +24,17 @@ namespace Framework
             Common.ClickElement(Locators.ProductsMenu.buttonOKSlapukuIsjungimas);
         }
 
-        public static void Medus()
+        public static void SpaustiMygtukaMedus()
         {
             Common.ScrollByPixels(0, 200);
+            Common.WaitForElementToBeVisible(Locators.ProductsMenu.buttonMedus);
             Common.ClickElement(Locators.ProductsMenu.buttonMedus);
         }
 
+        public static void SpaustiMygtukaPerziuretiKrepseli()
+        {
+            Common.WaitForElementToBeVisible(Locators.ProductsMenu.buttonPerziuretiKrepseli);
+            Common.ClickElement(Locators.ProductsMenu.buttonPerziuretiKrepseli);
+        }
     }
 }

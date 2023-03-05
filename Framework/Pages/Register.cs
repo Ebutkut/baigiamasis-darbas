@@ -4,7 +4,7 @@ namespace Framework.Pages
 {
     public class Register
     {
-        public static void IsjungtiSlapukus()
+        public static void IsjungtiSlapukusSpaustiOK()
         {
             Common.WaitForElementToBeVisible(Locators.Register.buttonOKSlapukuIsjungimas);
             Common.ClickElement(Locators.Register.buttonOKSlapukuIsjungimas);

@@ -22,13 +22,13 @@ namespace Tests
             string valueEmail = "test@tester.com";
             string valueZinute = "Noriu";
 
-            EducationForm.IsjungtiSlapukus();
-            EducationForm.MygtukasEdukacijos();
-            EducationForm.MygtukasUzsisakytiEdukacija();
+            EducationForm.IsjungtiSlapukusSpaustiOK();
+            EducationForm.SpaustiMygtukaEdukacijos();
+            EducationForm.SpaustiMygtukaUzsisakytiEdukacija();
             EducationForm.IvestiVarda(valueVardas);
             EducationForm.IvestiElPasta(valueEmail);
             EducationForm.ParasytiZinute(valueZinute);
-            EducationForm.MygtukasSiusti();
+            EducationForm.SpaustiMygtukaSiusti();
 
             Assert.AreEqual(expectedText, EducationForm.ZinutesIssiuntimoPatvirtinimas());
         }

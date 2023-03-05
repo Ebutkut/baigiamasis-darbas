@@ -18,9 +18,9 @@ namespace Tests
             string expectedResult = "Vaisių sulčių guminukai „Broliai lokiai“";
 
             ProductsMenu.IsjungtiSlapukus();
-            ProductsMenu.Medus();
-            ProductsMenu.IdetiIKrepseli();
-            ProductsMenu.IPirkiniuKrepseliIdetasProduktas();
+            ProductsMenu.SpaustiMygtukaMedus();
+            ProductsMenu.SpaustiMygtukaIdetiIKrepseli();
+            ProductsMenu.SpaustiMygtukaPerziuretiKrepseli();
 
             Assert.AreEqual(expectedResult, ProductsMenu.IPirkiniuKrepseliIdetasProduktas());
         }

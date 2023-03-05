@@ -10,7 +10,7 @@ namespace Framework.Pages
             return Common.GetElementText(Locators.UserInformationForm.zinuteDuomenysPakeisti);
         }
 
-        public static void IsjungtiSlapukus()
+        public static void IsjungtiSlapukusSpaustiOK()
         {
             Common.WaitForElementToBeVisible(Locators.UserInformationForm.buttonOKSlapukuIsjungimas);
             Common.ClickElement(Locators.UserInformationForm.buttonOKSlapukuIsjungimas);
@@ -36,18 +36,13 @@ namespace Framework.Pages
             Common.SendKeys(Locators.UserInformationForm.inputVartotojoVardas, valueVartotojoVardas);
         }
 
-        public static void MygtukasIssaugotiPakeitimus()
+        public static void SpaustiMygtukaIssaugotiPakeitimus()
         {
-            Common.ScrollByPixels(0,400);
+            Common.ScrollByPixels(0,300);
             Common.ClickElement(Locators.UserInformationForm.buttonIssaugotiPakeitimus);
         }
 
-        public static void MygtukasPrisijungti()
-        {
-            Common.ClickElement(Locators.UserInformationForm.buttonPrisijungti);
-        }
-
-        public static void MygtukasVartotojoInformacija()
+        public static void SpaustiMygtukaVartotojoInformacija()
         {
             Common.ClickElement(Locators.UserInformationForm.buttonVartotojoInformacija);
         }
@@ -55,6 +50,11 @@ namespace Framework.Pages
         public static void PatvirtintiNaujaSlaptazodi(string valueNaujasSlaptazodis)
         {
             Common.SendKeys(Locators.UserInformationForm.inputPatvirtintiSlaptazodi, valueNaujasSlaptazodis);
+        }
+
+        public static void SpaustiMygtukaPrisijungti()
+        {
+            Common.ClickElement(Locators.UserInformationForm.buttonPrisijungti);
         }
     }
 }

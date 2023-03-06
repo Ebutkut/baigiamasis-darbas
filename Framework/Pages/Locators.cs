@@ -41,9 +41,10 @@ namespace Framework.Pages
         {
             internal static string buttonOKSlapukuIsjungimas = "//button[.='OK']";
             internal static string buttonMedus = "//*[@id='menu-item-638']";
-            internal static string buttonIdetiIKrepseli = "//a[text()='Į krepšelį']";
+            internal static string buttonIdetiIKrepseli = "//*[@id=\"product-8350\"]/div/div[1]/div/div[2]/form/button";
             internal static string buttonPerziuretiKrepseli = "//a[text()='Peržiūrėti krepšelį']";
             internal static string IPirkiniuKrepseliIdetasProduktas = "//a[text()='Vaisių sulčių guminukai „Broliai lokiai“']";
+            internal static string ProduktasVaisiuSulčiuGuminukaiBroliaiLokiai = "//a[@href='https://broliumedus.lt/produktas/vaisiu-sulciu-guminukai-broliai-lokiai/']";
         }
 
         internal static class EducationForm

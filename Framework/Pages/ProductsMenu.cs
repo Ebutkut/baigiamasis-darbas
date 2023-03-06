@@ -7,7 +7,6 @@ namespace Framework
     {
         public static void SpaustiMygtukaIdetiIKrepseli()
         {
-            Common.ScrollByPixels(0, 200);
             Common.WaitForElementToBeVisible(Locators.ProductsMenu.buttonIdetiIKrepseli);
             Common.ClickElement(Locators.ProductsMenu.buttonIdetiIKrepseli);
         }
@@ -35,6 +34,12 @@ namespace Framework
         {
             Common.WaitForElementToBeVisible(Locators.ProductsMenu.buttonPerziuretiKrepseli);
             Common.ClickElement(Locators.ProductsMenu.buttonPerziuretiKrepseli);
+        }
+
+        public static void SpaustiProduktaVaisiuSulčiuGuminukaiBroliaiLokiai()
+        {
+            Common.WaitForElementToBeVisible(Locators.ProductsMenu.ProduktasVaisiuSulčiuGuminukaiBroliaiLokiai);
+            Common.ClickElement(Locators.ProductsMenu.ProduktasVaisiuSulčiuGuminukaiBroliaiLokiai);
         }
     }
 }

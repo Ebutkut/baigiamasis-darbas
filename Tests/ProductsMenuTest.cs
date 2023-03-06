@@ -19,6 +19,7 @@ namespace Tests
 
             ProductsMenu.IsjungtiSlapukus();
             ProductsMenu.SpaustiMygtukaMedus();
+            ProductsMenu.SpaustiProduktaVaisiuSulčiuGuminukaiBroliaiLokiai();
             ProductsMenu.SpaustiMygtukaIdetiIKrepseli();
             ProductsMenu.SpaustiMygtukaPerziuretiKrepseli();
 

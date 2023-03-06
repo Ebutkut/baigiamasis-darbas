@@ -10,12 +10,6 @@ namespace Framework.Pages
             return Common.GetElementText(Locators.UserInformationForm.zinuteDuomenysPakeisti);
         }
 
-        public static void IsjungtiSlapukusSpaustiOK()
-        {
-            Common.WaitForElementToBeVisible(Locators.UserInformationForm.buttonOKSlapukuIsjungimas);
-            Common.ClickElement(Locators.UserInformationForm.buttonOKSlapukuIsjungimas);
-        }
-
         public static void IvestiEsamaSlaptazodi(string valueEsamasSlaptazodis)
         {
             Common.SendKeys(Locators.UserInformationForm.inputEsamasSlaptazodis, valueEsamasSlaptazodis);

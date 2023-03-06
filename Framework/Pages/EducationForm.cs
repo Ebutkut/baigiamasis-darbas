@@ -7,12 +7,7 @@ namespace Framework.Pages
 {
     public class EducationForm
     {
-        public static void IsjungtiSlapukusSpaustiOK()
-        {
-            Common.WaitForElementToBeVisible(Locators.EducationForm.buttonOKSlapukuIsjungimas);
-            Common.ClickElement(Locators.EducationForm.buttonOKSlapukuIsjungimas);
-        }
-
+        
         public static void IvestiElPasta(string valueEmail)
         {
             Common.SendKeys(Locators.EducationForm.inputEmail, valueEmail);

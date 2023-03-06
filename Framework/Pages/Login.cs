@@ -4,12 +4,6 @@ namespace Framework.Pages
 {
     public class Login
     {
-        public static void IsjungtiSlapukusSpaustiOK()
-        {
-            Common.WaitForElementToBeVisible(Locators.Login.buttonOKSlapukuIsjungimas);
-            Common.ClickElement(Locators.Login.buttonOKSlapukuIsjungimas);
-        }
-
         public static void IvestiSlaptazodi(string valueSlaptazodis)
         {
             Common.SendKeys(Locators.Login.inputSlaptazodis, valueSlaptazodis);

@@ -11,6 +11,7 @@ namespace Tests
         public void Open()
         {
             Driver.OpenUrl("https://broliumedus.lt/");
+            HomePage.IsjungtiSlapukusSpaustiOK();
         }
 
         [Test]
@@ -22,7 +23,6 @@ namespace Tests
             string valueEmail = "test@tester.com";
             string valueZinute = "Noriu";
 
-            EducationForm.IsjungtiSlapukusSpaustiOK();
             EducationForm.SpaustiMygtukaEdukacijos();
             EducationForm.SpaustiMygtukaUzsisakytiEdukacija();
             EducationForm.IvestiVarda(valueVardas);

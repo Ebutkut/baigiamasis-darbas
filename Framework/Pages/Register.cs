@@ -1,14 +1,7 @@
-﻿using System;
-
-namespace Framework.Pages
+﻿namespace Framework.Pages
 {
     public class Register
     {
-        public static void IsjungtiSlapukusSpaustiOK()
-        {
-            Common.WaitForElementToBeVisible(Locators.Register.buttonOKSlapukuIsjungimas);
-            Common.ClickElement(Locators.Register.buttonOKSlapukuIsjungimas);
-        }
 
         public static void IvestiElPasta(string valueEmail)
         {
@@ -31,5 +24,6 @@ namespace Framework.Pages
             Common.WaitForElementToBeVisible(Locators.Register.buttonVartotojoPiktograma);
             Common.ClickElement(Locators.Register.buttonVartotojoPiktograma);
         }
+
     }
 }

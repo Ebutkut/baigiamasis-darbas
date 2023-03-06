@@ -12,6 +12,7 @@ namespace Tests
         public void Open()
         {
             Driver.OpenUrl("https://broliumedus.lt/mano-paskyra/");
+            HomePage.IsjungtiSlapukusSpaustiOK();
         }
 
         [Test]
@@ -19,16 +20,13 @@ namespace Tests
         {
             string expectedText = "Sveiki, erika.butkut! (Jūs ne erika.butkut? Atsijunkite)";
             string valueVartotojoVardas = "erika.butkut";
-            string valueSlaptazodis = "testavimas16";
+            string valueSlaptazodis = "testavimas17";
               
-            Login.IsjungtiSlapukusSpaustiOK();
             Login.IvestiVartotojoVarda(valueVartotojoVardas);
             Login.IvestiSlaptazodi(valueSlaptazodis);
             Login.SpaustiMygtukaPrisijungti();
 
             Assert.AreEqual(expectedText, Login.PrisijungimoPatvirtinimas());
-
         }
-
     }
 }

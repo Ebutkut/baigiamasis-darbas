@@ -17,12 +17,6 @@ namespace Framework
             return Common.GetElementText(Locators.ProductsMenu.IPirkiniuKrepseliIdetasProduktas);
         }
 
-        public static void IsjungtiSlapukus()
-        {
-            Common.WaitForElementToBeVisible(Locators.ProductsMenu.buttonOKSlapukuIsjungimas);
-            Common.ClickElement(Locators.ProductsMenu.buttonOKSlapukuIsjungimas);
-        }
-
         public static void SpaustiMygtukaMedus()
         {
             Common.ScrollByPixels(0, 200);

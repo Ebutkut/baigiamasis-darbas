@@ -10,22 +10,22 @@ namespace Tests
         public void Open()
         {
             Driver.OpenUrl("https://broliumedus.lt/");
+            HomePage.IsjungtiSlapukusSpaustiOK();
         }
 
         [Test]
         public void RegisterFormWithValidData()
         {
-            string expectedText = "Sveiki, tester70! (Jūs ne tester70? Atsijunkite)";
+            string expectedText = "Sveiki, tester10! (Jūs ne tester10? Atsijunkite)";
+            string valueEmail = "tester10@test.com";
 
-            string valueEmail = "tester70@test.com";
-
-            Register.IsjungtiSlapukusSpaustiOK();
             Register.SpaustiMygtukaVartotojoPiktograma();
             Register.IvestiElPasta(valueEmail);
             Register.SpaustiMygtukaRegistruotis();
             Register.SpaustiMygtukaVartotojoPiktograma();
 
             Assert.AreEqual(expectedText, Register.RegistracijosPatvirtinimas());
+
         }
     }
 }

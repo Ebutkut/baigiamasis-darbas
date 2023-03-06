@@ -10,6 +10,7 @@ namespace Tests
         public void Open()
         {
             Driver.OpenUrl("https://broliumedus.lt/");
+            HomePage.IsjungtiSlapukusSpaustiOK();
         }
 
         [Test]
@@ -17,7 +18,6 @@ namespace Tests
         {
             string expectedResult = "Vaisių sulčių guminukai „Broliai lokiai“";
 
-            ProductsMenu.IsjungtiSlapukus();
             ProductsMenu.SpaustiMygtukaMedus();
             ProductsMenu.SpaustiProduktaVaisiuSulčiuGuminukaiBroliaiLokiai();
             ProductsMenu.SpaustiMygtukaIdetiIKrepseli();

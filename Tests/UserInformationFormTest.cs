@@ -11,6 +11,7 @@ namespace Tests
         public void Open()
         {
             Driver.OpenUrl("https://broliumedus.lt/mano-paskyra/");
+            HomePage.IsjungtiSlapukusSpaustiOK();
         }
 
         [Test]
@@ -19,11 +20,10 @@ namespace Tests
             string expectedText = "Paskyros duomenys sėkmingai pakeisti.";
 
             string valueVartotojoVardas = "erika.butkut";
-            string valueSlaptazodis = "testavimas16";
-            string valueEsamasSlaptazodis = "testavimas16";
-            string valueNaujasSlaptazodis = "testavimas17";
+            string valueSlaptazodis = "testavimas17";
+            string valueEsamasSlaptazodis = "testavimas17";
+            string valueNaujasSlaptazodis = "testavimas18";
 
-            UserInformationForm.IsjungtiSlapukusSpaustiOK();
             UserInformationForm.IvestiVartotojoVarda(valueVartotojoVardas);
             UserInformationForm.IvestiSlaptazodi(valueSlaptazodis);
             UserInformationForm.SpaustiMygtukaPrisijungti();

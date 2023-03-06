@@ -19,7 +19,7 @@ namespace Tests
             string expectedResult = "Vaisių sulčių guminukai „Broliai lokiai“";
 
             ProductsMenu.SpaustiMygtukaMedus();
-            ProductsMenu.SpaustiProduktaVaisiuSulčiuGuminukaiBroliaiLokiai();
+            ProductsMenu.SpaustiProduktaVaisiuSulciuGuminukaiBroliaiLokiai();
             ProductsMenu.SpaustiMygtukaIdetiIKrepseli();
             ProductsMenu.SpaustiMygtukaPerziuretiKrepseli();
 

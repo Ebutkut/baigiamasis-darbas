@@ -30,7 +30,7 @@ namespace Framework
             Common.ClickElement(Locators.ProductsMenu.buttonPerziuretiKrepseli);
         }
 
-        public static void SpaustiProduktaVaisiuSulčiuGuminukaiBroliaiLokiai()
+        public static void SpaustiProduktaVaisiuSulciuGuminukaiBroliaiLokiai()
         {
             Common.WaitForElementToBeVisible(Locators.ProductsMenu.ProduktasVaisiuSulčiuGuminukaiBroliaiLokiai);
             Common.ClickElement(Locators.ProductsMenu.ProduktasVaisiuSulčiuGuminukaiBroliaiLokiai);

@@ -20,6 +20,7 @@ namespace Framework.Pages
             internal static string buttonRegistruotis = "//*[@id='customer_login']/div[2]/div/form/p[4]/button";
             internal static string buttonOKSlapukuIsjungimas = "//button[.='OK']";
             internal static string zinutePrisiregistravus = "//*[@id='content']/div/div/div/div/div/p[1]";
+            internal static string buttonVartotojoPiktograma = "//*[@id='masthead']/div[1]/div[4]/ul/li[3]/div/a/i";
         }
 
         internal static class UserInformationForm

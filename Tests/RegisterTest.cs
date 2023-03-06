@@ -9,19 +9,21 @@ namespace Tests
         [SetUp]
         public void Open()
         {
-            Driver.OpenUrl("https://broliumedus.lt/mano-paskyra/");
+            Driver.OpenUrl("https://broliumedus.lt/");
         }
 
         [Test]
         public void RegisterFormWithValidData()
         {
-            string expectedText = "Sveiki, test35! (Jūs ne test35? Atsijunkite)";
+            string expectedText = "Sveiki, tester70! (Jūs ne tester70? Atsijunkite)";
 
-            string valueEmail = "test35@tester.com";
+            string valueEmail = "tester70@test.com";
 
             Register.IsjungtiSlapukusSpaustiOK();
+            Register.SpaustiMygtukaVartotojoPiktograma();
             Register.IvestiElPasta(valueEmail);
             Register.SpaustiMygtukaRegistruotis();
+            Register.SpaustiMygtukaVartotojoPiktograma();
 
             Assert.AreEqual(expectedText, Register.RegistracijosPatvirtinimas());
         }

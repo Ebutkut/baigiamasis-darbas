@@ -24,5 +24,12 @@ namespace Framework.Pages
         {
             Common.ClickElement(Locators.Register.buttonRegistruotis);
         }
+
+        public static void SpaustiMygtukaVartotojoPiktograma()
+        {
+            Common.ScrollByPixels(0, 100);
+            Common.WaitForElementToBeVisible(Locators.Register.buttonVartotojoPiktograma);
+            Common.ClickElement(Locators.Register.buttonVartotojoPiktograma);
+        }
     }
 }

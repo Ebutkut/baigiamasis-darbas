@@ -39,10 +39,10 @@
          4.1.3 Spausti mygtuką "Į KREPŠELĮ".
          4.1.3 Spausti mygtuką "PERŽIŪRĖTI KREPŠELĮ".
 
-     Tikėtinas rezultatas: Vartotojui į pirkinių krepšelį įdėjus produktą matomas      
-     pasirinkto produkto pavadinimas "Vaisių sulčių guminukai „Broliai lokiai“"
+     Tikėtinas rezultatas: Matomas į pirkinių krepšelį įdėto pasirinkto         
+     produkto pavadinimas "Vaisių sulčių guminukai „Broliai lokiai“"
 ### **5. Edukacijos užsakymo funkcionalumas**
-     5.1 Užsisakyti edukaciją su validžiais duomenimims
+     5.1 Užsisakyti edukaciją su validžiais duomenimis
          5.1.1 Spausti mygtuką "EDUKACIJOS".
          5.1.2 Spausti mygtuką "UŽSISAKYTI EDUKACIJĄ".
          5.1.3 Įvesti vardą "Tester".

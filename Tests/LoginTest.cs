@@ -20,7 +20,9 @@ namespace Tests
         {
             string expectedText = "Sveiki, erika.butkut! (Jūs ne erika.butkut? Atsijunkite)";
             string valueVartotojoVardas = "erika.butkut";
-            string valueSlaptazodis = "testavimas17";
+            // Testas UserInformationFormUpdate atnaujina slaptažodį, todėl šiame teste vis 
+            // reikia pakeisti slaptažodį pagal UserInformationFormUpdate testo valueNaujasSlaptazodis reikšmę
+            string valueSlaptazodis = "testavimas18";
               
             Login.IvestiVartotojoVarda(valueVartotojoVardas);
             Login.IvestiSlaptazodi(valueSlaptazodis);

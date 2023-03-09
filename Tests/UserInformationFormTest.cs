@@ -20,9 +20,11 @@ namespace Tests
             string expectedText = "Paskyros duomenys sėkmingai pakeisti.";
 
             string valueVartotojoVardas = "erika.butkut";
-            string valueSlaptazodis = "testavimas17";
-            string valueEsamasSlaptazodis = "testavimas17";
-            string valueNaujasSlaptazodis = "testavimas18";
+            //Testą leidžiant pakartotinai, reikia vis atnaujinti
+            //valueSlaptazodis, valueEsamasSlaptazodis,valueNaujasSlaptazodis reikšmes
+            string valueSlaptazodis = "testavimas18";
+            string valueEsamasSlaptazodis = "testavimas18";
+            string valueNaujasSlaptazodis = "testavimas19";
 
             UserInformationForm.IvestiVartotojoVarda(valueVartotojoVardas);
             UserInformationForm.IvestiSlaptazodi(valueSlaptazodis);

@@ -16,8 +16,10 @@ namespace Tests
         [Test]
         public void RegisterFormWithValidData()
         {
-            string expectedText = "Sveiki, tester10! (Jūs ne tester10? Atsijunkite)";
-            string valueEmail = "tester10@test.com";
+            //Leidžiant testą pakartotinai, reikia vis atnaujinti valueEmail ir pagal jį 
+            //pakoreguoti expectedText 
+            string expectedText = "Sveiki, tester15! (Jūs ne tester15? Atsijunkite)";
+            string valueEmail = "tester15@test.com";
 
             Register.SpaustiMygtukaVartotojoPiktograma();
             Register.IvestiElPasta(valueEmail);

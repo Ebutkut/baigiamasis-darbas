@@ -29,7 +29,6 @@
 
         public static void SpaustiMygtukaIssaugotiPakeitimus()
         {
-            Common.ScrollByPixels(0,300);
             Common.ClickElement(Locators.UserInformationForm.buttonIssaugotiPakeitimus);
         }
 

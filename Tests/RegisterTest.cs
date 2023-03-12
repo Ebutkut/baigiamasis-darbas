@@ -1,4 +1,3 @@
-﻿using Framework;
 using Framework.Pages;
 using NUnit.Framework;
 
@@ -6,12 +5,6 @@ namespace Tests
 {
     internal class RegisterTest : BaseTest
     {
-        [SetUp]
-        public void Open()
-        {
-            Driver.OpenUrl("https://broliumedus.lt/");
-            HomePage.IsjungtiSlapukusSpaustiOK();
-        }
 
         [Test]
         public void RegisterFormWithValidData()

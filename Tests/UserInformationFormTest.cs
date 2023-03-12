@@ -10,7 +10,6 @@ namespace Tests
         public void Open()
         {
             Driver.OpenUrl("https://broliumedus.lt/mano-paskyra/");
-            HomePage.IsjungtiSlapukusSpaustiOK();
         }
 
         [Test]

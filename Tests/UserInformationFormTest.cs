@@ -20,12 +20,11 @@ namespace Tests
             string valueVartotojoVardas = "erika.butkut";
             //Testą leidžiant pakartotinai, reikia vis atnaujinti
             //valueSlaptazodis, valueEsamasSlaptazodis,valueNaujasSlaptazodis reikšmes
-            string valueSlaptazodis = "testavimas18";
-            string valueEsamasSlaptazodis = "testavimas18";
-            string valueNaujasSlaptazodis = "testavimas19";
+            string valueEsamasSlaptazodis = "testavimas21";
+            string valueNaujasSlaptazodis = "testavimas22";
 
             UserInformationForm.IvestiVartotojoVarda(valueVartotojoVardas);
-            UserInformationForm.IvestiSlaptazodi(valueSlaptazodis);
+            UserInformationForm.IvestiSlaptazodi(valueEsamasSlaptazodis);
             UserInformationForm.SpaustiMygtukaPrisijungti();
             UserInformationForm.SpaustiMygtukaVartotojoInformacija();
             UserInformationForm.IvestiEsamaSlaptazodi(valueEsamasSlaptazodis);

@@ -1,4 +1,4 @@
-using Framework.Pages;
+﻿using Framework.Pages;
 using NUnit.Framework;
 
 namespace Tests
@@ -11,8 +11,8 @@ namespace Tests
         {
             //Leidžiant testą pakartotinai, reikia vis atnaujinti valueEmail ir pagal jį 
             //pakoreguoti expectedText 
-            string expectedText = "Sveiki, tester15! (Jūs ne tester15? Atsijunkite)";
-            string valueEmail = "tester15@test.com";
+            string expectedText = "Sveiki, tester20! (Jūs ne tester19? Atsijunkite)";
+            string valueEmail = "tester20@test.com";
 
             Register.SpaustiMygtukaVartotojoPiktograma();
             Register.IvestiElPasta(valueEmail);

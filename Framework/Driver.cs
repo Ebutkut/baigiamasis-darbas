@@ -8,9 +8,7 @@ namespace Framework
         private static IWebDriver driver;
         public static void SetupDriver()
         {
-            ChromeOptions options = new ChromeOptions();
-            options.AddArgument("--ignore-certificate-errors");
-            driver = new ChromeDriver(options);
+            driver = new ChromeDriver();
         }
 
         internal static IWebDriver GetDriver()

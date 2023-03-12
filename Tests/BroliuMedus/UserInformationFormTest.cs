@@ -1,8 +1,9 @@
 ﻿using Framework;
 using Framework.Pages;
 using NUnit.Framework;
+using Tests.BaseTests;
 
-namespace Tests
+namespace Tests.BroliuMedus
 {
     internal class UserInformationFormTest : BaseTest
     {

@@ -2,7 +2,7 @@
 using Framework.Pages;
 using NUnit.Framework;
 
-namespace Tests
+namespace Tests.BaseTests
 {
     internal class BaseTest
     {

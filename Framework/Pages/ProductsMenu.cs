@@ -1,7 +1,4 @@
-﻿using Framework.Pages;
-using System;
-
-namespace Framework
+﻿namespace Framework.Pages
 {
     public class ProductsMenu
     {

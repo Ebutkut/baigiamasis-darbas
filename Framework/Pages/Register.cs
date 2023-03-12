@@ -2,7 +2,6 @@
 {
     public class Register
     {
-
         public static void IvestiElPasta(string valueEmail)
         {
             Common.SendKeys(Locators.Register.inputEmail, valueEmail);
@@ -24,6 +23,5 @@
             Common.WaitForElementToBeVisible(Locators.Register.buttonVartotojoPiktograma);
             Common.ClickElement(Locators.Register.buttonVartotojoPiktograma);
         }
-
     }
 }

@@ -27,7 +27,6 @@ namespace Tests
             Register.SpaustiMygtukaVartotojoPiktograma();
 
             Assert.AreEqual(expectedText, Register.RegistracijosPatvirtinimas());
-
         }
     }
 }

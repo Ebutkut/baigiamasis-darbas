@@ -1,13 +1,7 @@
-﻿using OpenQA.Selenium.Support.UI;
-using OpenQA.Selenium;
-using System;
-using SeleniumExtras.WaitHelpers;
-
-namespace Framework.Pages
+﻿namespace Framework.Pages
 {
     public class EducationForm
     {
-        
         public static void IvestiElPasta(string valueEmail)
         {
             Common.SendKeys(Locators.EducationForm.inputEmail, valueEmail);

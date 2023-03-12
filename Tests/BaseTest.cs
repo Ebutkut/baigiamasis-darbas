@@ -1,5 +1,4 @@
 ﻿using Framework;
-using Framework.Pages;
 using NUnit.Framework;
 
 namespace Tests

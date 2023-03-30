@@ -1,7 +1,13 @@
-﻿namespace Framework.Pages
+﻿using System;
+
+namespace Framework.Pages
 {
     public class Register
     {
+        public static string GenerateRandomUserName()
+        {
+            return Guid.NewGuid().ToString();
+        }
 
         public static void IvestiElPasta(string valueEmail)
         {
@@ -24,6 +30,5 @@
             Common.WaitForElementToBeVisible(Locators.Register.buttonVartotojoPiktograma);
             Common.ClickElement(Locators.Register.buttonVartotojoPiktograma);
         }
-
     }
 }

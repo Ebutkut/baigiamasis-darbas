@@ -1,10 +1,7 @@
-﻿using System;
-
-namespace Framework.Pages
+﻿namespace Framework.Pages
 {
     public class UserInformationForm
-    {
-        
+    {  
         public static string DuomenuPakeitimoPatvirtinimas()
         {
             return Common.GetElementText(Locators.UserInformationForm.zinuteDuomenysPakeisti);
@@ -32,7 +29,6 @@ namespace Framework.Pages
 
         public static void SpaustiMygtukaIssaugotiPakeitimus()
         {
-            Common.ScrollByPixels(0,300);
             Common.ClickElement(Locators.UserInformationForm.buttonIssaugotiPakeitimus);
         }
 

@@ -1,4 +1,7 @@
-﻿namespace Framework.Pages
+﻿using Framework.Pages;
+using System;
+
+namespace Framework
 {
     public class ProductsMenu
     {
@@ -16,6 +19,7 @@
 
         public static void SpaustiMygtukaMedus()
         {
+            Common.ScrollByPixels(0, 200);
             Common.WaitForElementToBeVisible(Locators.ProductsMenu.buttonMedus);
             Common.ClickElement(Locators.ProductsMenu.buttonMedus);
         }

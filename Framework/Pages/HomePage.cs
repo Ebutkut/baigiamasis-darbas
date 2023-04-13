@@ -6,7 +6,6 @@
         {
             Common.WaitForElementToBeVisible(Locators.HomePage.buttonOKSlapukuIsjungimas);
             Common.ClickElement(Locators.HomePage.buttonOKSlapukuIsjungimas);
-            Common.ScrollByPixels(0, 200);
         }
     }
 }

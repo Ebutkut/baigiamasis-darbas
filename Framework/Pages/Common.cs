@@ -49,5 +49,7 @@ namespace Framework.Pages
             WebDriverWait wait = new WebDriverWait(Driver.GetDriver(), TimeSpan.FromSeconds(20));
             wait.Until(ExpectedConditions.ElementIsVisible(By.XPath(locator)));
         }
+
+
     }
 }

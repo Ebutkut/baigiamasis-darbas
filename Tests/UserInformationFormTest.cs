@@ -1,6 +1,7 @@
 ﻿using Framework;
 using Framework.Pages;
 using NUnit.Framework;
+using System;
 
 namespace Tests
 {
@@ -10,6 +11,7 @@ namespace Tests
         public void Open()
         {
             Driver.OpenUrl("https://broliumedus.lt/mano-paskyra/");
+            HomePage.IsjungtiSlapukusSpaustiOK();
         }
 
         [Test]
@@ -20,11 +22,12 @@ namespace Tests
             string valueVartotojoVardas = "erika.butkut";
             //Testą leidžiant pakartotinai, reikia vis atnaujinti
             //valueSlaptazodis, valueEsamasSlaptazodis,valueNaujasSlaptazodis reikšmes
-            string valueEsamasSlaptazodis = "testavimas22";
-            string valueNaujasSlaptazodis = "testavimas23";
+            string valueSlaptazodis = "testavimas18";
+            string valueEsamasSlaptazodis = "testavimas18";
+            string valueNaujasSlaptazodis = "testavimas19";
 
             UserInformationForm.IvestiVartotojoVarda(valueVartotojoVardas);
-            UserInformationForm.IvestiSlaptazodi(valueEsamasSlaptazodis);
+            UserInformationForm.IvestiSlaptazodi(valueSlaptazodis);
             UserInformationForm.SpaustiMygtukaPrisijungti();
             UserInformationForm.SpaustiMygtukaVartotojoInformacija();
             UserInformationForm.IvestiEsamaSlaptazodi(valueEsamasSlaptazodis);

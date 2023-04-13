@@ -10,8 +10,6 @@ namespace Tests
         public void Setup()
         {
             Driver.SetupDriver();
-            Driver.OpenUrl("https://broliumedus.lt/");
-            HomePage.IsjungtiSlapukusSpaustiOK();
         }
 
         [TearDown]

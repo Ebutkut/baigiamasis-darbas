@@ -1,4 +1,6 @@
-﻿namespace Framework.Pages
+﻿using System;
+
+namespace Framework.Pages
 {
     public class Login
     {
@@ -21,5 +23,6 @@
         {
             return Common.GetElementText(Locators.Login.zinutePrisijungus);
         }
+
     }
 }

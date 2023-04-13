@@ -1,6 +1,8 @@
 ﻿using Framework;
 using NUnit.Framework;
 using Framework.Pages;
+using System;
+using System.Security.AccessControl;
 
 namespace Tests
 {
@@ -10,6 +12,7 @@ namespace Tests
         public void Open()
         {
             Driver.OpenUrl("https://broliumedus.lt/mano-paskyra/");
+            HomePage.IsjungtiSlapukusSpaustiOK();
         }
 
         [Test]
@@ -19,9 +22,8 @@ namespace Tests
             string valueVartotojoVardas = "erika.butkut";
             // Testas UserInformationFormUpdate atnaujina slaptažodį, todėl šiame teste vis 
             // reikia pakeisti slaptažodį pagal UserInformationFormUpdate testo valueNaujasSlaptazodis reikšmę
-            string valueSlaptazodis = "testavimas22";
-
-
+            string valueSlaptazodis = "testavimas18";
+              
             Login.IvestiVartotojoVarda(valueVartotojoVardas);
             Login.IvestiSlaptazodi(valueSlaptazodis);
             Login.SpaustiMygtukaPrisijungti();

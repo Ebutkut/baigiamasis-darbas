@@ -1,7 +1,4 @@
-﻿using OpenQA.Selenium;
-using System;
-
-namespace Framework.Pages
+﻿namespace Framework.Pages
 {
     internal class Locators
     {
@@ -32,7 +29,6 @@ namespace Framework.Pages
             internal static string inputPatvirtintiSlaptazodi = "//*[@id='password_2']";
             internal static string buttonIssaugotiPakeitimus = "//*[@id='content']/div/div/div/div/div/form/p[5]/button";
             internal static string zinuteDuomenysPakeisti = "//*[@id='wrapper']/div[1]";
-           
         }
 
         internal static class ProductsMenu
@@ -59,6 +55,5 @@ namespace Framework.Pages
         {
             internal static string buttonOKSlapukuIsjungimas = "//button[.='OK']";
         }
-
     }
 }

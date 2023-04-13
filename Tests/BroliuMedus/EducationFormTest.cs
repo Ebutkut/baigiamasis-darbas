@@ -1,18 +1,11 @@
-﻿using Framework;
-using Framework.Pages;
+﻿using Framework.Pages;
 using NUnit.Framework;
-using System;
+using Tests.BaseTests;
 
-namespace Tests
+namespace Tests.BroliuMedus
 {
     internal class EducationFormTest : BaseTest
     {
-        [SetUp]
-        public void Open()
-        {
-            Driver.OpenUrl("https://broliumedus.lt/");
-            HomePage.IsjungtiSlapukusSpaustiOK();
-        }
 
         [Test]
         public void EducationFormWithValidData()

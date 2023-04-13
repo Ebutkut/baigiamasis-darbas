@@ -1,17 +1,11 @@
-﻿using Framework;
-using Framework.Pages;
+﻿using Framework.Pages;
 using NUnit.Framework;
+using Tests.BaseTests;
 
-namespace Tests
+namespace Tests.BroliuMedus
 {
     internal class ProductsMenuTest : BaseTest
     {
-        [SetUp]
-        public void Open()
-        {
-            Driver.OpenUrl("https://broliumedus.lt/");
-            HomePage.IsjungtiSlapukusSpaustiOK();
-        }
 
         [Test]
         public void AddProductToCart()

@@ -27,7 +27,7 @@
          4. Spausti mygtuką "Vartotojo informacija".
          5. Įvesti Esamą slaptažodį "testavimas22".
          6. Įvesti Naują slaptažodį "testavimas23".
-         7. Pakartotinai įvesti naują slaptažodį "testasvimas18".
+         7. Pakartotinai įvesti naują slaptažodį "testasvimas23".
          8. Spausti mygtuką "IŠSAUGOTI PAKEITIMUS".
 
      Tikėtinas rezultatas: Vartotojui atnaujinus paskyros duomenis       
